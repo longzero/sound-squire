@@ -15,7 +15,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Longzero',
+  title: title,
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
