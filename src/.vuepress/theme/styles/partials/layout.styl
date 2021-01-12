@@ -1,0 +1,32 @@
+.column-main
+  @media (min-width: breakpoint-ipad)
+    flex-grow: 1
+    padding-right: 50px
+  @media (min-width: breakpoint-ipad-landscape)
+    padding-right: 0
+.column-sidebar
+  @media (min-width: breakpoint-ipad)
+    flex-shrink: 0
+    width 300px
+
+.container
+  margin-left auto
+  margin-right auto
+  padding-left 20px
+  padding-right 20px
+  max-width: site-width
+  width 100%
+.container--content
+  max-width content-width
+.container--fluid
+  @media (min-width: breakpoint-air)
+    max-width: 90vw
+
+.layout-2
+  @media (min-width: breakpoint-ipad)
+    display: flex
+    justify-content: space-between
+
+.theme-default-content:not(.custom)
+  a:hover
+    text-decoration: none

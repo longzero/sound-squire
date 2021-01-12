@@ -1,0 +1,61 @@
+// Use this class to set a default for all animations.
+.animation {
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+// The following classes define animations that you want.
+// These are only examples.
+// Delete those you don't use.
+// Create your own.
+// Mix and match: I use both fade-in and move-up together, but their are basically the same as fade-in-up.
+// Think of this like shorthand vs detailed padding.
+
+// Have fun!
+
+.fade-in {
+    opacity: 0;
+    &.animate {
+        opacity: 1;
+    }
+}
+
+.fade-in-3 {
+  opacity: 0.3;
+    &.animate {
+        opacity: 1;
+    }
+}
+
+.fade-in-5 {
+  opacity: 0.5;
+    &.animate {
+        opacity: 1;
+    }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(50px);
+    &.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+    &.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.move-up {
+  transform: translateY(50px);
+    &.animate {
+        transform: translateY(0);
+    }
+}
+

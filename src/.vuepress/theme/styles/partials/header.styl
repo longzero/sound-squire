@@ -1,0 +1,78 @@
+.header-links
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-size .8em
+  .site-navigation
+    display: none
+
+.nav-item
+  margin-right 1em
+
+.site-header
+  background-color color-header-background
+  box-shadow: shadow-header
+  color color-header-copy
+  font-size: .8em
+  margin-bottom 70px
+  padding-top 10px
+  padding-bottom 10px
+  position: sticky
+  top 0
+  z-index: 1000
+  &:hover
+    .site-name-switch
+      transform translateY(-50%)
+  a
+    color inherit
+    line-height: 1
+    transition-duration: .3s
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .dropdown-wrapper
+    .dropdown-title,
+    .mobile-dropdown-title
+      color #fff
+      font-size: 1em
+    .nav-dropdown .dropdown-item a
+      color color-1
+  .nav-links
+    a
+      &:hover, &.router-link-active
+        color $accentColor
+        text-decoration: underline
+  @media (min-width: $MQMobile)
+    .nav-item > a:not(.external)
+      &:hover, &.router-link-active
+        border-bottom 0
+        color #fff
+        margin-bottom -2px
+  .search-box
+    // display: none
+    // @media (min-width: breakpoint-ipad)
+    //   display: block
+    input
+      background-position 13px 5px
+      background-size 14px
+      left 0
+      height 26px
+      @media (min-width: breakpoint-search)
+        background-position 9px 5px
+        width auto
+
+.site-name,
+.site-name-switch
+  display inline-block
+  line-height: 1.2 // Not really necessarily. Very little change.
+  vertical-align: top
+.site-name
+  height 20px
+  overflow: hidden
+.site-name-alternate,
+.site-name-main
+  display: block
+.site-name-switch
+  margin-left -4px
+  transition-duration: .3s
