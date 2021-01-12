@@ -15,7 +15,7 @@
           p {{ $page.frontmatter.newsletterLine }}
 
     .home-footer
-      a(href="#") <svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 30L30 0l30 30-30 30L0 30zm30 27.172L57.172 30 30 2.828 2.828 30 30 57.172z" fill="#E5D7AA"/><path d="M6 30L30 6l24 24-24 24L6 30z" fill="#E5D7AA"/><path d="M33.719 31l.437-2.875h-2.781V26.25c0-.813.375-1.563 1.625-1.563h1.281V22.22S33.125 22 32.031 22c-2.281 0-3.781 1.406-3.781 3.906v2.219h-2.563V31h2.563v7h3.125v-7h2.344z" fill="#525158"/></svg>
+      a(:href="$page.frontmatter.facebookLink") <svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 30L30 0l30 30-30 30L0 30zm30 27.172L57.172 30 30 2.828 2.828 30 30 57.172z" fill="#E5D7AA"/><path d="M6 30L30 6l24 24-24 24L6 30z" fill="#E5D7AA"/><path d="M33.719 31l.437-2.875h-2.781V26.25c0-.813.375-1.563 1.625-1.563h1.281V22.22S33.125 22 32.031 22c-2.281 0-3.781 1.406-3.781 3.906v2.219h-2.563V31h2.563v7h3.125v-7h2.344z" fill="#525158"/></svg>
       p {{ $page.frontmatter.footerLine }}
 
 
