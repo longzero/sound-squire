@@ -3,7 +3,7 @@
 // https://gist.github.com/MartinMuzatko/cc86b3f168630c05978d65c36169b129
 let ogprefix = 'og: http://ogp.me/ns#'
 let title = 'Sound Squire'
-let description = ''
+let description = 'Sound Squire is a brand new immersive tool for broadcasting music and sound effects during your tabletop plays. Spice up your adventures and campaigns. Both for players and GMs.'
 let color = '#336699'
 let author = 'Longzero'
 
