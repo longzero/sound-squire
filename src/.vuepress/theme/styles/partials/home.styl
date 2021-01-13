@@ -15,13 +15,15 @@
     &:after
       background none
       content attr(data-text)
+      display: block
       position absolute
       top 0
       left 50%
       z-index: 1
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       transform translateX(-50%)
-      white-space: nowrap
+      // white-space: nowrap
+      width 100%
 
   #app
   .theme-container
@@ -40,6 +42,8 @@
     align-items: center
     justify-content: center
     flex-grow 1
+    padding-top: 50px;
+    padding-bottom: 50px
 
   .newsletter-box
     color color-1
@@ -59,6 +63,10 @@
       width 100%
       height 60px
 
+  .site-logo
+    max-width: 500px
+    width 100%
+
   .theme-container
     background-image url('/images/domen-kozelj-cavrem-town-close-updated.jpg')
     background-position center
@@ -73,7 +81,9 @@
     justify-content: space-between
     margin-left: auto
     margin-right: auto
-    max-width: 704px
+    padding-left: 20px;
+    padding-right: 20px
+    max-width: 744px
 
   .h-text-center
     text-align: center
