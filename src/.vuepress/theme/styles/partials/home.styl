@@ -1,90 +1,110 @@
-  h1
-    padding-bottom: 30px
+// H1 has a text shadow
+// This is another way to do it.
+h1
+  padding-bottom: 30px
+  position: relative
+  span
+    background-color: #E5D7AA;
+    background-image: linear-gradient(90deg, #E5D7AA, #CDB25B);
+    // background-image: conic-gradient(#E5D7AA, #CDB25B);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
     position: relative
-    span
-      background-color: #E5D7AA;
-      background-image: linear-gradient(90deg, #E5D7AA, #CDB25B);
-      // background-image: conic-gradient(#E5D7AA, #CDB25B);
-      background-size: 100%;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
-      position: relative
-      z-index: 10
-    &:after
-      background none
-      content attr(data-text)
-      display: block
-      position absolute
-      top 0
-      left 50%
-      z-index: 1
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      transform translateX(-50%)
-      // white-space: nowrap
-      width 100%
-
-  #app
-  .theme-container
-    min-height: 100vh
+    z-index: 10
+  &:after
+    background none
+    content attr(data-text)
+    display: block
+    position absolute
+    top 0
+    left 50%
+    z-index: 1
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform translateX(-50%)
+    // white-space: nowrap
     width 100%
 
-  .home-footer
-    font-size calc(12 / 16 * 1rem)
-    padding 30px 20px
-    a
-      display: inline-block
-      margin-bottom: 15px
+#app
+.theme-container
+  min-height: 100vh
+  width 100%
 
-  .main-content
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-grow 1
-    padding-top: 50px;
-    padding-bottom: 50px
+.audio-volume
+  background-color transparent
+  border 0
+  position: fixed
+  top 20px
+  right 20px
+  width 40px
+  height 40px
+  svg
+    width: 40px
+    height 40px
+    path
+      &:first-child
+        fill color-1
+        stroke color-1
+      &:last-child
+        stroke color-1
 
-  .newsletter-box
-    color color-1
-    margin-top: 60px
-    button
-      background-color transparent
-      border 0
-    input[type="email"]
-      background: rgba(57, 56, 61, 0.6);
-      border: 2px solid color-1;
-      color: #fff
-      font-size calc(18 / 16 * 1rem)
-      margin-top: 13px
-      margin-bottom: 30px
-      padding 1rem 20px
-      max-width 460px
-      width 100%
-      height 60px
+.home-footer
+  font-size calc(12 / 16 * 1rem)
+  padding 30px 20px
+  a
+    display: inline-block
+    margin-bottom: 15px
 
-  .site-logo
-    max-width: 500px
+.main-content
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-grow 1
+  padding-top: 50px;
+  padding-bottom: 50px
+
+.newsletter-box
+  color color-1
+  margin-top: 60px
+  button
+    background-color transparent
+    border 0
+  input[type="email"]
+    background: rgba(57, 56, 61, 0.6);
+    border: 2px solid color-1;
+    color: #fff
+    font-size calc(18 / 16 * 1rem)
+    margin-top: 13px
+    margin-bottom: 30px
+    padding 1rem 20px
+    max-width 460px
     width 100%
+    height 60px
 
-  .theme-container
-    background-image url('/images/domen-kozelj-cavrem-town-close-updated.jpg')
-    background-position center
-    background-size cover
-    display: flex
-    // align-items: center
-    justify-content: center
+.site-logo
+  max-width: 500px
+  width 100%
 
-  .wrapper--home
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    margin-left: auto
-    margin-right: auto
-    padding-left: 20px;
-    padding-right: 20px
-    max-width: 744px
+.theme-container
+  background-image url('/images/domen-kozelj-cavrem-town-close-updated.jpg')
+  background-position center
+  background-size cover
+  display: flex
+  // align-items: center
+  justify-content: center
 
-  .h-text-center
-    text-align: center
+.wrapper--home
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-left: auto
+  margin-right: auto
+  padding-left: 20px;
+  padding-right: 20px
+  max-width: 744px
+
+.h-text-center
+  text-align: center
 

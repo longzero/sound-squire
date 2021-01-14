@@ -30,8 +30,9 @@
     .home-footer
       a(:href="$page.frontmatter.facebookLink") <svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 30L30 0l30 30-30 30L0 30zm30 27.172L57.172 30 30 2.828 2.828 30 30 57.172z" fill="#E5D7AA"/><path d="M6 30L30 6l24 24-24 24L6 30z" fill="#E5D7AA"/><path d="M33.719 31l.437-2.875h-2.781V26.25c0-.813.375-1.563 1.625-1.563h1.281V22.22S33.125 22 32.031 22c-2.281 0-3.781 1.406-3.781 3.906v2.219h-2.563V31h2.563v7h3.125v-7h2.344z" fill="#525158"/></svg>
       p {{ $page.frontmatter.footerLine }}
-
-
+    button.audio-volume#play-pause-button(@click="volume")
+      | <svg v-if="!isMute" class="audio-volume-on" xmlns="http://www.w3.org/2000/svg" version="1.0" width="500" height="500" viewBox="0 0 75 75"><path d="M39.389 13.769L22.235 28.606H6v19.093h15.989l17.4 15.051V13.769z" stroke="#111" stroke-width="5" stroke-linejoin="round" fill="#111"/><path d="M48 27.6A19.5 19.5 0 0148 49m7.1-28.5a30 30 0 010 35.6M61.6 14a38.8 38.8 0 010 48.6" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/></svg>
+      | <svg v-if="isMute" class="audio-volume-off" xmlns="http://www.w3.org/2000/svg" version="1.0" width="500" height="500" viewBox="0 0 75 75" stroke="#111" stroke-width="5"><path d="M39 14L22 29H6v19h16l17 15z" fill="#111" stroke-linejoin="round"/><path d="M49 26l20 24m0-24L49 50" fill="none" stroke-linecap="round"/></svg>
 </template>
 
 <script>
@@ -39,6 +40,28 @@
   export default {
     components: {
       // SocialShareLink
+    },
+    data() {
+      return {
+        audio: "",
+        isMute: false
+      }
+    },
+    methods: {
+      volume() {
+        if (this.audio.volume == 1) {
+          this.audio.volume = 0
+          this.isMute = true
+        } else {
+          this.audio.volume = 1
+          this.isMute = false
+        }
+      }
+    },
+    mounted () {
+      this.audio = new Audio("/audio/Landingmp3F.mp3");
+      this.audio.play()
+      // this.audio.volume = 0
     }
   }
 </script>
