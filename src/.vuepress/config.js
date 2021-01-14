@@ -37,9 +37,9 @@ module.exports = {
     // ['meta', { prefix: ogprefix, property: 'og:description', content: description }],
     // ['meta', { prefix: ogprefix, property: 'og:image', content: 'https://longzero.com/images/og.jpg' }],
     ['meta', { prefix: ogprefix, property: 'og:article:author', content: author }],
-    ['link', { rel: 'icon', href: '/images/favicon.png' }],
-    ['link', { rel: 'preload', crossorigin: 'anonymous', as: 'font', href: '/fonts/oxygen-v10-latin-regular.woff2' }],
-    ['link', { rel: 'preload', crossorigin: 'anonymous', as: 'font', href: '/fonts/oxygen-v10-latin-700.woff2' }],
+    // ['link', { rel: 'icon', href: '/images/favicon.png' }],
+    // ['link', { rel: 'preload', crossorigin: 'anonymous', as: 'font', href: '/fonts/oxygen-v10-latin-regular.woff2' }],
+    // ['link', { rel: 'preload', crossorigin: 'anonymous', as: 'font', href: '/fonts/oxygen-v10-latin-700.woff2' }],
     ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-5GQK95YTD3' }],
     ['script', {}, `
       window.dataLayer = window.dataLayer || [];
