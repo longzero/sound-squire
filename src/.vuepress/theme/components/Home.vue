@@ -44,7 +44,7 @@
     data() {
       return {
         audio: "",
-        isMute: false
+        isMute: true
       }
     },
     methods: {
@@ -53,6 +53,7 @@
           this.audio.volume = 0
           this.isMute = true
         } else {
+          this.audio.play()
           this.audio.volume = 1
           this.isMute = false
         }
@@ -61,7 +62,7 @@
     mounted () {
       this.audio = new Audio("/audio/Landingmp3F.mp3");
       this.audio.play()
-      // this.audio.volume = 0
+      this.audio.volume = 0
     }
   }
 </script>
