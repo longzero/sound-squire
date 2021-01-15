@@ -62,6 +62,7 @@
     mounted () {
       this.audio = new Audio("/audio/Landingmp3F.mp3");
       this.audio.play()
+      this.audio.loop = true
       this.audio.volume = 0
     }
   }
