@@ -6,11 +6,11 @@ let title = 'Sound Squire'
 let description = 'Sound Squire is a brand new immersive tool for broadcasting music and sound effects during your tabletop plays. Spice up your adventures and campaigns. Both for players and GMs.'
 let color = '#336699'
 let author = 'Longzero'
-
+let domain: 'https://soundsquire.com',
 
 module.exports = {
   base: '',
-  domain: 'https://longzero.com',
+  domain: domain,
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -103,7 +103,7 @@ module.exports = {
   themeConfig: {
     dateFormat: 'YYYY-MM-DD',
     docsDir: '',
-    domain: 'https://longzero.com',
+    domain: domain,
     editLinks: false,
     editLinkText: '',
     lastUpdated: false,
